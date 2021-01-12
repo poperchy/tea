@@ -776,6 +776,9 @@ textarea {
       @media(max-width: 680px) {
         gap: 50px
       }
+      @media(max-width: $tablet-width) {
+        gap: 20px;
+      }
     }
   }
 
@@ -788,6 +791,9 @@ textarea {
       color: #FFB520;
       display: flex;
       align-items: center;
+      @media(max-width: $tablet-width) {
+        font-size: 14px;
+      }
 
       img {
         width: 38px;
@@ -809,6 +815,19 @@ textarea {
         margin-right: 15px;
       }
     }
+  }
+
+}
+.hide-desk{
+  display: block;
+  @media(max-width: $tablet-width) {
+    display: none;
+  }
+}
+.show-mobile{
+  display: none;
+  @media(max-width: $tablet-width) {
+    display: block;
   }
 }
 

@@ -1,5 +1,203 @@
 {% extends 'layout/base.twig' %}
 {% block title %}contacts{% endblock %}
 {% block body %}
-<main></main>
+    <main class="contacts__main">
+        <section class="contacts">
+            <section class="breadcrumbs">
+                <div class="breadcrumbs__wrapper container">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li class="breadcrumbs__item-active"><span>Контакты</span></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="contacts__wrap">
+                <div class="container">
+                    <h2>Контакты</h2>
+                    <div class="contacts__list">
+                        <div class="contacts__item contacts__item--phone">
+                            <h4>Телефоны:</h4>
+                            <div class="contacts__wrap-phone">
+                                <a href="tel:+375447585858">+375 44 758 58 58,</a>
+                                <a href="tel:+375447585858">+375 44 758 58 58</a>
+                            </div>
+
+                            <ul class="messengers">
+                                <li><a href="#"><span class="visually-hidden">Вайбер</span><img
+                                                src="images/svg/icon-viber.svg" width="35" height="35"
+                                                alt="Вайбер"/></a></li>
+                                <li><a href="#"><span class="visually-hidden">Телеграм</span><img
+                                                src="images/svg/icon-telegram.svg" width="35" height="35"
+                                                alt="Телеграм"/></a></li>
+                                <li><a href="#"><span class="visually-hidden">Ватсап</span><img
+                                                src="images/svg/icon-whatsapp.svg" width="35" height="35" alt="Ватсап"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contacts__item contacts__item--mail">
+                            <h4>Почта и соцсети:</h4>
+                            <a href="mailto:M_expressinfo@tut.by">M_expressinfo@tut.by</a>
+                            <ul class="socials">
+                                <li><a href="#"><span class="visually-hidden">Вконтакте</span><img
+                                                src="images/svg/icon-vk.svg" width="35" height="35"
+                                                alt="Вконтакте"/></a></li>
+                                <li><a href="#"><span class="visually-hidden">Инстаграм</span><img
+                                                src="images/svg/icon-in.svg" width="35" height="35"
+                                                alt="Инстаграм"/></a></li>
+                                <li><a href="#"><span class="visually-hidden">Ютьюб</span><img
+                                                src="images/svg/icon-youtube.svg" width="35" height="35"
+                                                alt="Ютьюб"/></a></li>
+                                <li><a href="#"><span class="visually-hidden">Одноклассники</span><img
+                                                src="images/svg/icon-ok.svg" width="35" height="35"
+                                                alt="Одноклассники"/></a></li>
+                                <li><a href="#"><span class="visually-hidden">Фэйсбук</span><img
+                                                src="images/svg/icon-fb.svg" width="35" height="35" alt="Фэйсбук"/></a>
+                                </li>
+                                <li><a href="#"><span class="visually-hidden">Линкедин</span><img
+                                                src="images/svg/icon-linked.svg" width="35" height="35" alt="Линкедин"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contacts__item contacts__item--marker">
+                            <h4>Адрес и время работы:</h4>
+                            <a href="https://yandex.by/maps/-/CCUIFMCjkB">Минск, пер. Козлова 24А</a>
+                            <p>9:00 - 18:00 без выходных</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__wrap-form">
+                    <div class="container">
+                        <div class="contacts__forms">
+                            <section class="form-order">
+                                <div class="form-order__wrapper">
+                                    <div class="form-order__inner-box">
+                                        <div class="form-order__wrap-box">
+                                            <form class="form-order__box">
+                                                <div class="form-order__box-1">
+                                                    <h3>Напишите нам</h3>
+                                                    <div class="form-order__data-box">
+                                                        <div class="form-order__points-box">
+                                                            <div class="form-order__points">
+                                                                <div class="form-order__point-1 form-group">
+                                                                    <input id="name" type="text">
+                                                                    <label for="name">Имя*</label>
+                                                                </div>
+                                                                <div class="form-order__point-1 form-group">
+                                                                    <input id="tel" type="tel">
+                                                                    <label for="tel">Телефон</label>
+                                                                </div>
+                                                                <div class="form-order__point-1 form-group">
+                                                                    <input id="email" type="email">
+                                                                    <label for="email">E-mail*</label>
+                                                                </div>
+                                                                <div class="form-order__point-1 form-group">
+                                                                    <textarea name="text" id="text"></textarea>
+                                                                    <label for="text">Ваше сообщение</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <button type="button"
+                                                            class="button button--form-order service-slider__btn"><span>Отправить</span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="contacts__map">
+                                <div class="ymap-container">
+                                    <div class="loader loader-default"></div>
+                                    <div id="map-yandex"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer main-footer--contacts">
+        <section class="main-footer__wrapper container">
+            <div class="main-footer__box">
+                <div class="main-footer__image"><a href="#"><img src="images/svg/logo.svg" width="195" height="80"
+                                                                 alt="Логотип"/></a></div>
+                <div class="main-footer__address"><a
+                            href="https://yandex.by/maps/157/minsk/house/Zk4Ycw5jQEIEQFtpfXVxcnRlYQ==/?ll=27.596172%2C53.903972&amp;utm_source=main_stripe_big&amp;z=17"
+                            target="_blanck"><img src="images/svg/icon-pin.svg" width="30" height="30" alt="Адрес"/>Минск,
+                        пер. Козлова 24А</a>
+                    <p><img src="images/svg/icon-footer-clock.svg" width="30" height="30" alt="Время работы"/>9:00 -
+                        20:00 без выходных
+                    </p>
+                </div>
+                <ul class="socials">
+                    <li><a href="#"><span class="visually-hidden">Вконтакте</span><img src="images/svg/icon-vk.svg"
+                                                                                       width="35" height="35"
+                                                                                       alt="Вконтакте"/></a></li>
+                    <li><a href="#"><span class="visually-hidden">Инстаграм</span><img src="images/svg/icon-in.svg"
+                                                                                       width="35" height="35"
+                                                                                       alt="Инстаграм"/></a></li>
+                    <li><a href="#"><span class="visually-hidden">Ютьюб</span><img src="images/svg/icon-youtube.svg"
+                                                                                   width="35" height="35" alt="Ютьюб"/></a>
+                    </li>
+                    <li><a href="#"><span class="visually-hidden">Одноклассники</span><img src="images/svg/icon-ok.svg"
+                                                                                           width="35" height="35"
+                                                                                           alt="Одноклассники"/></a>
+                    </li>
+                    <li><a href="#"><span class="visually-hidden">Фэйсбук</span><img src="images/svg/icon-fb.svg"
+                                                                                     width="35" height="35"
+                                                                                     alt="Фэйсбук"/></a></li>
+                    <li><a href="#"><span class="visually-hidden">Линкедин</span><img src="images/svg/icon-linked.svg"
+                                                                                      width="35" height="35"
+                                                                                      alt="Линкедин"/></a></li>
+                </ul>
+            </div>
+            <div class="main-footer__nav">
+                <ul class="main-footer__list-1">
+                    <li><a href="#">Экспресс-доставка Москва-Минск</a></li>
+                    <li><a href="#">Доставка по всей России</a></li>
+                    <li><a href="#">Авиадоставка из Москвы</a></li>
+                    <li><a href="#">Доставка из IKEA</a></li>
+                </ul>
+                <ul class="main-footer__list-2">
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="main-footer__contacts">
+                    <div class="main-footer__contacts-box"><a href="tel:+375447585858"><img
+                                    src="images/svg/icon-tel.svg" width="30" height="30" alt="Телефон"/>+375 44 758 58
+                            58</a><a href="tel:+375447585858"><img src="images/svg/icon-tel.svg" width="30" height="30"
+                                                                   alt="Телефон"/>+375 44 758 58 58</a><a
+                                href="mailto:m_expressinfo@tut.by"><img src="images/svg/icon-mail.svg" width="30"
+                                                                        height="30"
+                                                                        alt="Почта"/>M_expressinfo@tut.by</a></div>
+                    <ul class="messengers">
+                        <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="images/svg/icon-viber.svg"
+                                                                                        width="35" height="35"
+                                                                                        alt="Вайбер"/></a></li>
+                        <li><a href="#"><span class="visually-hidden">Телеграм</span><img
+                                        src="images/svg/icon-telegram.svg" width="35" height="35" alt="Телеграм"/></a>
+                        </li>
+                        <li><a href="#"><span class="visually-hidden">Ватсап</span><img
+                                        src="images/svg/icon-whatsapp.svg" width="35" height="35" alt="Ватсап"/></a>
+                        </li>
+                        <li><a href="#"><span class="visually-hidden">Скайп</span><img src="images/svg/icon-skype.svg"
+                                                                                       width="35" height="35"
+                                                                                       alt="Скайп"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="developers">
+            <div class="developers__wrapper"><a href="#">Разработка и продвижение<img src="images/svg/cmbox-logo.svg"
+                                                                                      width="93" height="33"
+                                                                                      alt="Digital-Агенство CmBox"/></a>
+            </div>
+        </section>
+    </footer>
 {% endblock %}

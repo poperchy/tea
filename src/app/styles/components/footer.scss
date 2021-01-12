@@ -1,0 +1,117 @@
+.footer {
+  margin-top: -32px;
+
+  &__label {
+    margin: 0 auto;
+    background: linear-gradient(276.51deg, #FFCF25 -7.99%, #FFE68B 84.12%);
+    width: 231px;
+    height: 119px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-family: gruppo, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 46px;
+      color: #1D1D1D;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 15px;
+      color: #1D1D1D;
+      display: inline-block;
+      max-width: 90px;
+    }
+  }
+
+  .social__list {
+    display: flex;
+    gap: 32px;
+    margin-top: 29px;
+    justify-content: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .mail {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 32px;
+    margin-bottom: 49px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: #1D1D1D;
+    @include mobile{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 33px;
+    margin-bottom: 67px;
+    @include mobile {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: #1D1D1D;
+      transition: .2s;
+
+      &:hover {
+        color: #FFE68B;
+        transition: .2s;
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 50px;
+    color: #1D1D1D;
+    margin-bottom: 27px;
+   p{
+     @include mobile{
+       font-size: 14px;
+       line-height: 22px;
+
+     }
+   }
+  }
+
+  &__dev {
+    margin-bottom: 20px;
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 7px;
+      line-height: 9px;
+      color: #1D1D1D;
+      text-align: end;
+    }
+  }
+}

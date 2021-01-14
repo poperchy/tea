@@ -4,9 +4,10 @@
     <list default="true" id="3f100435-5f51-4524-80d3-c20fe7b829b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/components/breadcrumbs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/components/breadcrumbs.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/components/simple.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/components/simple.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/delivery-page.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/delivery-page.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/layout/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/layout/base.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,7 @@
       <updated>1610429361871</updated>
       <workItem from="1610429362957" duration="28577000" />
       <workItem from="1610519111652" duration="18892000" />
+      <workItem from="1610605938223" duration="22700000" />
     </task>
     <servers />
   </component>

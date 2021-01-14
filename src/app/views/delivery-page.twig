@@ -20,15 +20,269 @@
                 </div>
                 <div class="delivery__ordering" style="background-image: url('images/delivery-bg1.jpg')">
                     <div class="container">
-                        <ul>
-                            <li>
-                                <img src="" alt="">
-                                <h3></h3>
-                                <p></p>
-                            </li>
-                        </ul>
+                        <div class="delivery__ordering-wrap">
+                            <ul>
+                                <li>
+                                    <img src="images/svg/check.svg" alt="">
+                                    <div class="delivery__desc">
+                                        <h3>РАБОТАЕМ ПО 100% ПРЕДОПЛАТЕ</h3>
+                                        <p>Вы можете сами оплатить или передать денежные средства и мы оплатим при
+                                            покупке
+                                            вашего заказа.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/svg/ikea.svg" alt="">
+                                    <div class="delivery__desc">
+                                        <h3>СКИДКИ</h3>
+                                        <p>Предоставляем скидки по картеIKEA Family
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/svg/cmr.svg" alt="">
+                                    <div class="delivery__desc">
+                                        <h3>100% гарантия</h3>
+                                        <p>Система CMR-страхования обеспечивает гарантию сохранности вашего груза
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/svg/sofa.svg" alt="">
+                                    <div class="delivery__desc">
+                                        <h3>доставим все</h3>
+                                        <p>Грузы до 3,5 т, вместительность до 2, 5 кубов. Можем подсоединить лаферы и
+                                            доставить даже авто!
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/svg/door.svg" alt="">
+                                    <div class="delivery__desc">
+                                        <h3>до двери подъезда</h3>
+                                        <p>При необходимости зберем ваш груз прямо от двери и доставим по нужному адресу
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/svg/bus.svg" alt="">
+                                    <div class="delivery__desc">
+                                        <h3>ДОСТАВКА ЗА 12 ЧАСОВ</h3>
+                                        <p>Экономим время и силы клиентов
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/svg/man.svg" alt="">
+                                    <div class="delivery__desc">
+                                        <h3>помощь таможенного агента</h3>
+                                        <p>Мы можем оказать помощь в таможенном оформлении груза
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <section class="form-order">
+                                <div class="form-order__wrapper container">
+                                    <div class="form-order__inner-box">
+                                        <div class="form-order__wrap-box">
+                                            <form class="form-order__box form-order__box--delivery" enctype="multipart/form-data">
+                                                <div class="form-order__box-1">
+                                                    <h3>Оформить доставку</h3>
+                                                    <div class="form-order__data-box">
+                                                        <div class="form-order__points-box">
+                                                            <div class="form-order__points">
+                                                                <div class="form-order__point-1">
+                                                                    <input id="point-1" type="text"/>
+                                                                    <label for="point-1">Откуда</label>
+                                                                </div>
+                                                                <button class="button-revers" type="button">
+                                                                    <span class="visually-hidden">Изменить маршрут</span>
+                                                                </button>
+                                                                <div class="form-order__point-2">
+                                                                    <input id="point-2" type="text"/>
+                                                                    <label for="point-2">Куда</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-order__points-2">
+                                                                <div class="form-order__where form-group">
+                                                                    <input id="street-1" type="text"/>
+                                                                    <label for="street-1">Улица</label>
+                                                                </div>
+                                                                <div class="form-order__where form-group">
+                                                                    <input id="street-2" type="text"/>
+                                                                    <label for="street-2">Улица</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-order__points-2">
+                                                                <div class="form-order__data-wrap">
+                                                                    <div class="form-order__data form-group">
+                                                                        <input id="house-1" type="text"/>
+                                                                        <label for="house-1">Дом</label>
+                                                                    </div>
+                                                                    <div class="form-order__data form-group">
+                                                                        <input id="korp-1" type="text"/>
+                                                                        <label for="korp-1">Корп</label>
+                                                                    </div>
+                                                                    <div class="form-order__data form-group">
+                                                                        <input id="room-1" type="text"/>
+                                                                        <label for="room-1">Кв.</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-order__data-wrap">
+                                                                    <div class="form-order__data form-group">
+                                                                        <input id="house-2" type="text"/>
+                                                                        <label for="house-2">Дом</label>
+                                                                    </div>
+                                                                    <div class="form-order__data form-group">
+                                                                        <input id="korp-2" type="text"/>
+                                                                        <label for="korp-2">Корп</label>
+                                                                    </div>
+                                                                    <div class="form-order__data form-group">
+                                                                        <input id="room-2" type="text"/>
+                                                                        <label for="room-2">Кв.</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-order__points-2">
+                                                                <div class="form-group form-order__point-3">
+                                                                    <input class="datepicker-here" id="data-d"
+                                                                           type="text"/>
+                                                                    <label for="data-d">Дата доставки</label>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input id="time-d" type="text"/>
+                                                                    <label for="time-d">Время доставки</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-order__points-2">
+                                                                <div class="form-group">
+                                                                    <input id="weight" type="text"/>
+                                                                    <label for="weight">Вес, кг</label>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input id="volume" type="text"/>
+                                                                    <label for="volume">Объем, м<sup>3</sup></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-order__data-box-2">
+                                                    <ul>
+                                                        <li>
+                                                            <input class="visually-hidden" id="check-1"
+                                                                   type="checkbox"
+                                                                   checked="checked"/>
+                                                            <label for="check-1">Груз упакован</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="visually-hidden" id="check-2"
+                                                                   type="checkbox"/>
+                                                            <label for="check-2">Груз не упакован</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="visually-hidden" id="check-3"
+                                                                   type="checkbox"
+                                                                   checked="checked"/>
+                                                            <label for="check-3">Можно кантовать</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="visually-hidden" id="check-4"
+                                                                   type="checkbox"/>
+                                                            <label for="check-4">Хрупкий груз</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="form-order__file-wrap">
+                                                    <div class="form-group">
+                                                        <img src="images/svg/warning.svg" alt="">
+                                                        <p>Если груз будет значительно больше указанных габаритов, то за
+                                                            него придется доплатить. </p>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <img src="images/svg/camera.svg" alt="">
+                                                        <p>Для более точного отпределения особенностей груза, у вас есть
+                                                            возможность <label for="file">прикрепить его фото</label>.
+                                                        </p>
+                                                        <input class="visually-hidden file" type="file" id="file" multiple="multiple" multiple data-multiple-caption="Выбрано файлов: {count}">
+                                                        <div class="file-res">
+                                                            <span></span>
+                                                            <a class="reset-file" href="#">Х</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-order__data-box form-order__data-box--com">
+                                                    <div class="form-group">
+                                                        <input type="text" id="company">
+                                                        <label for="company">Имя/ компания*</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-order__radio">
+                                                    <div class="form-group">
+                                                        <input class="visually-hidden" type="radio" id="item-1"
+                                                               name="face">
+                                                        <label for="item-1">Физ. лицо</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="visually-hidden" type="radio" id="item-2"
+                                                               name="face" checked>
+                                                        <label for="item-2">Юр. лицо</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="visually-hidden" type="radio" id="item-3"
+                                                               name="face">
+                                                        <label for="item-3">ИП</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group--text">
+                                                    <textarea name="text" id="text"></textarea>
+                                                    <label for="text">Для юр. лиц и ИП введите реквизиты</label>
+                                                </div>
+                                                <div class="form-order__points-box">
+                                                    <div class="form-order__data-box">
+                                                        <div class="form-order__points-2">
+                                                            <div class="form-order__where form-group">
+                                                                <input id="phone" type="tel"required/>
+                                                                <label for="phone">Телефон</label>
+                                                            </div>
+                                                            <div class="form-order__where form-group">
+                                                                <input id="email" type="email" required/>
+                                                                <label for="email">E-mail</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="button button--effect-1">
+                                                    <span>Оформить доставку</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="delivery__delivery-caption container">
+                <h3>Условия доставки</h3>
+                <ul>
+                    <li>
+                        <p>Доставка из Москвы в Минск осуществляется <strong>по рабочему расписанию
+                                автомобилей</strong>. Доставка по
+                            Минску включена в стоимость заказа и дополнительных оплат не требуется. Доставка
+                            осуществляется до двери Вашего подъезда. Поднятие на этаж <strong>не входит в
+                                услуги</strong> по доставке
+                            курьером.</p>
+                    </li>
+                    <li>
+                        <p>День и время доставки определяется в зависимости от утверждённого плана доставок
+                            курьером. Заказ будет доставлен в указанный вами день и время, которые вы можете
+                            <strong>согласовать заранее</strong> при оформлении заказа.</p>
+                    </li>
+                </ul>
+            </div>
             </div>
         </section>
     </main>

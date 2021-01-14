@@ -94,6 +94,7 @@
 })();
 'use strict';
 
+
 (function () {
 
     var serviceSlider = document.querySelector('.service-slider__wrapper')
@@ -145,18 +146,17 @@
 
 (function () {
 
-    var formOrder = document.querySelector('.form-order__box');
+    var formOrder = document.querySelector('.form-order__box--delivery');
 
     if (formOrder) {
 
-        var btnRevers = formOrder.querySelector('.button-revers');
-        var number = 0;
-        if (formReverse) {
-            var formReverse = function () {
-                number = number + 180;
-                btnRevers.style.transform = 'rotate(' + number + 'deg)';
-            };
-        }
+        var btnRevers = document.querySelector('.button-revers');
+        var number = 0
+        var formReverse = function () {
+            number = number + 180;
+            btnRevers.style.transform = 'rotate(' + number + 'deg)';
+        };
+
 
         if (btnRevers) {
             btnRevers.addEventListener('click', formReverse);
@@ -216,6 +216,13 @@
                 $(this).removeClass("not-empty");
             }
         });
+        $("#name").keyup(function () {
+            if ($(this).val()) {
+                $(this).addClass("not-empty");
+            } else {
+                $(this).removeClass("not-empty");
+            }
+        });
         var inputmask_options;
 
         inputmask_options = {
@@ -225,8 +232,8 @@
             showMaskOnFocus: true,
         };
 
-        // $("#point-3").inputmask("99/99/9999", inputmask_options);
-        // $("#point-3").datepicker();
+        $("#point-3").inputmask("99/99/9999", inputmask_options);
+        $("#point-3").datepicker();
 
     }
 
@@ -396,6 +403,7 @@ $(function () {
 
 "use strict";
 
+
 (function () {
     const height = (elem) => {
         return elem.getBoundingClientRect().height
@@ -451,6 +459,40 @@ $(function () {
     }
 
 
+
+
+    // var inputFile = document.querySelector('.file');
+    // inputFile.addEventListener('change', function () {
+    //
+    //      var element = inputFile;
+    //      console.log(element.value.length);
+    //     //
+    //     // for (var x = 0; x < result.length; x++) {
+    //     //     var file = result[x],
+    //     //
+    //     //     li.className = "list-group-item";
+    //     //
+    //     //     document.querySelector('.file-res').appendChild(li);
+    //     // }
+    //     var result = element.files;
+    //     var li = document.createElement("span");
+    //     li.innerHTML = "Количество файлов: " + result.length;
+    //     document.querySelector('.file-res').appendChild(li);
+    // });
+    //
+    // var resetFile = document.querySelector('.reset-file');
+    // resetFile.addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     inputFile.value='';
+    // })
 })();
+$("input[type='file']").on("change", function(){
+    var numFiles = $(this).get(0).files.length;
+    $('.file-res span').text('Выбрано файлов:' + ' ' + numFiles);
+});
 
 
+$('.reset-file').click(function (e) {
+    e.preventDefault();
+    $('input[type="file"]').val(this.val == '');
+})

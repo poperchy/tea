@@ -291,6 +291,7 @@ function init() {
         zoom: 16, // коэффициент приближения карты
         controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
     });
+    myMapTemp.behaviors.disable('scrollZoom');
     var myPlacemarkTemp = new ymaps.Placemark([53.900448, 27.600602], {
         balloonContent: "переулок Козлова, 24А",
     }, {
@@ -316,8 +317,6 @@ function init() {
         spinner.removeClass('is-active');
     });
 }
-
-// Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов)
 function waitForTilesLoad(layer) {
     return new ymaps.vow.Promise(function (resolve, reject) {
         var tc = getTileContainer(layer), readyAll = true;
@@ -349,11 +348,8 @@ function getTileContainer(layer) {
     }
     return null;
 }
-
-// Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
 function loadScript(url, callback) {
     var script = document.createElement("script");
-
     if (script.readyState) {  // IE
         script.onreadystatechange = function () {
             if (script.readyState == "loaded" ||
@@ -367,37 +363,23 @@ function loadScript(url, callback) {
             callback();
         };
     }
-
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
 }
-
-// Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
 var ymap = function () {
     $('.ymap-container').mouseenter(function () {
-            if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
-
-                // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
+            if (!check_if_load) {
                 check_if_load = true;
-
-                // Показываем индикатор загрузки до тех пор, пока карта не загрузится
                 spinner.addClass('is-active');
-
-                // Загружаем API Яндекс.Карт
                 loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function () {
-                    // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
                     ymaps.load(init);
                 });
             }
         }
     );
 }
-
 $(function () {
-
-    //Запускаем основную функцию
     ymap();
-
 });
 
 
@@ -405,6 +387,8 @@ $(function () {
 
 
 (function () {
+
+
     const height = (elem) => {
         return elem.getBoundingClientRect().height
     }
@@ -459,40 +443,62 @@ $(function () {
     }
 
 
-
-
-    // var inputFile = document.querySelector('.file');
-    // inputFile.addEventListener('change', function () {
-    //
-    //      var element = inputFile;
-    //      console.log(element.value.length);
-    //     //
-    //     // for (var x = 0; x < result.length; x++) {
-    //     //     var file = result[x],
-    //     //
-    //     //     li.className = "list-group-item";
-    //     //
-    //     //     document.querySelector('.file-res').appendChild(li);
-    //     // }
-    //     var result = element.files;
-    //     var li = document.createElement("span");
-    //     li.innerHTML = "Количество файлов: " + result.length;
-    //     document.querySelector('.file-res').appendChild(li);
-    // });
-    //
-    // var resetFile = document.querySelector('.reset-file');
-    // resetFile.addEventListener('click', function (e) {
-    //     e.preventDefault();
-    //     inputFile.value='';
-    // })
 })();
-$("input[type='file']").on("change", function(){
+$("input[type='file']").on("change", function () {
     var numFiles = $(this).get(0).files.length;
+    $('.file-res').css('display', 'flex');
     $('.file-res span').text('Выбрано файлов:' + ' ' + numFiles);
 });
 
 
 $('.reset-file').click(function (e) {
     e.preventDefault();
-    $('input[type="file"]').val(this.val == '');
+    $('input[type="file"]').val('');
+    $('.file-res').css('display', 'none');
 })
+
+
+$('.js-btn').click(function (e) {
+    e.preventDefault();
+    $('.form-order__delivery').removeClass('form-order__delivery--show');
+    setTimeout(function () {
+        $('.js-btn').css('display', 'none')
+    }, 100);
+})
+
+$(".js-btn").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top - 100}, 1000);
+});
+
+
+$(window).on('load resize', function(){
+    if ($(window).width() <= 1024) {
+        $('.form-order__delivery').insertAfter('.insert');
+        if($('.form-order__delivery').hasClass('form-order__delivery--hide')){
+            $('.form-order__delivery').removeClass('form-order__delivery--hide')
+        }
+        $('.form-order__delivery').addClass('form-order__delivery--show');
+        $('.form-order__delivery').attr('id', 'form-delivery');
+    }else{
+        $('.form-order__delivery').addClass('form-order__delivery--hide');
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

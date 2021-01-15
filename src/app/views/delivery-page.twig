@@ -82,65 +82,66 @@
                                     </div>
                                 </li>
                             </ul>
-                            <section class="form-order">
+                            <section class="form-order form-order__delivery form-order__delivery--hide">
                                 <div class="form-order__wrapper container">
                                     <div class="form-order__inner-box">
                                         <div class="form-order__wrap-box">
-                                            <form class="form-order__box form-order__box--delivery" enctype="multipart/form-data">
+                                            <form class="form-order__box form-order__box--delivery"
+                                                  enctype="multipart/form-data">
                                                 <div class="form-order__box-1">
                                                     <h3>Оформить доставку</h3>
                                                     <div class="form-order__data-box">
                                                         <div class="form-order__points-box">
-                                                            <div class="form-order__points">
-                                                                <div class="form-order__point-1">
-                                                                    <input id="point-1" type="text"/>
-                                                                    <label for="point-1">Откуда</label>
+                                                            <div class="form-order__block form-order__points">
+                                                                <div class="form-order__block-wrap">
+                                                                    <div class="form-order__point-1">
+                                                                        <input id="point-1" type="text"/>
+                                                                        <label for="point-1">Откуда</label>
+                                                                    </div>
+                                                                    <div class="form-order__where form-group">
+                                                                        <input id="street-1" type="text"/>
+                                                                        <label for="street-1">Улица</label>
+                                                                    </div>
+                                                                    <div class="form-order__data-wrap">
+                                                                        <div class="form-order__data form-group">
+                                                                            <input id="house-1" type="text"/>
+                                                                            <label for="house-1">Дом</label>
+                                                                        </div>
+                                                                        <div class="form-order__data form-group">
+                                                                            <input id="korp-1" type="text"/>
+                                                                            <label for="korp-1">Корп</label>
+                                                                        </div>
+                                                                        <div class="form-order__data form-group">
+                                                                            <input id="room-1" type="text"/>
+                                                                            <label for="room-1">Кв.</label>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                                 <button class="button-revers" type="button">
                                                                     <span class="visually-hidden">Изменить маршрут</span>
                                                                 </button>
-                                                                <div class="form-order__point-2">
-                                                                    <input id="point-2" type="text"/>
-                                                                    <label for="point-2">Куда</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-order__points-2">
-                                                                <div class="form-order__where form-group">
-                                                                    <input id="street-1" type="text"/>
-                                                                    <label for="street-1">Улица</label>
-                                                                </div>
-                                                                <div class="form-order__where form-group">
-                                                                    <input id="street-2" type="text"/>
-                                                                    <label for="street-2">Улица</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-order__points-2">
-                                                                <div class="form-order__data-wrap">
-                                                                    <div class="form-order__data form-group">
-                                                                        <input id="house-1" type="text"/>
-                                                                        <label for="house-1">Дом</label>
+                                                                <div class="form-order__block-wrap">
+                                                                    <div class="form-order__point-1">
+                                                                        <input id="point-2" type="text"/>
+                                                                        <label for="point-2">Куда</label>
                                                                     </div>
-                                                                    <div class="form-order__data form-group">
-                                                                        <input id="korp-1" type="text"/>
-                                                                        <label for="korp-1">Корп</label>
+                                                                    <div class="form-order__where form-group">
+                                                                        <input id="street-2" type="text"/>
+                                                                        <label for="street-2">Улица</label>
                                                                     </div>
-                                                                    <div class="form-order__data form-group">
-                                                                        <input id="room-1" type="text"/>
-                                                                        <label for="room-1">Кв.</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-order__data-wrap">
-                                                                    <div class="form-order__data form-group">
-                                                                        <input id="house-2" type="text"/>
-                                                                        <label for="house-2">Дом</label>
-                                                                    </div>
-                                                                    <div class="form-order__data form-group">
-                                                                        <input id="korp-2" type="text"/>
-                                                                        <label for="korp-2">Корп</label>
-                                                                    </div>
-                                                                    <div class="form-order__data form-group">
-                                                                        <input id="room-2" type="text"/>
-                                                                        <label for="room-2">Кв.</label>
+                                                                    <div class="form-order__data-wrap">
+                                                                        <div class="form-order__data form-group">
+                                                                            <input id="house-2" type="text"/>
+                                                                            <label for="house-2">Дом</label>
+                                                                        </div>
+                                                                        <div class="form-order__data form-group">
+                                                                            <input id="korp-2" type="text"/>
+                                                                            <label for="korp-2">Корп</label>
+                                                                        </div>
+                                                                        <div class="form-order__data form-group">
+                                                                            <input id="room-2" type="text"/>
+                                                                            <label for="room-2">Кв.</label>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -205,11 +206,13 @@
                                                         <p>Для более точного отпределения особенностей груза, у вас есть
                                                             возможность <label for="file">прикрепить его фото</label>.
                                                         </p>
-                                                        <input class="visually-hidden file" type="file" id="file" multiple="multiple" multiple data-multiple-caption="Выбрано файлов: {count}">
-                                                        <div class="file-res">
-                                                            <span></span>
-                                                            <a class="reset-file" href="#">Х</a>
-                                                        </div>
+                                                        <input class="visually-hidden file" type="file" id="file"
+                                                               multiple="multiple" multiple
+                                                               data-multiple-caption="Выбрано файлов: {count}">
+                                                    </div>
+                                                    <div class="file-res">
+                                                        <span></span>
+                                                        <a class="reset-file" href="#"><img src="images/svg/cross.svg" alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="form-order__data-box form-order__data-box--com">
@@ -243,7 +246,7 @@
                                                     <div class="form-order__data-box">
                                                         <div class="form-order__points-2">
                                                             <div class="form-order__where form-group">
-                                                                <input id="phone" type="tel"required/>
+                                                                <input id="phone" type="tel" required/>
                                                                 <label for="phone">Телефон</label>
                                                             </div>
                                                             <div class="form-order__where form-group">
@@ -253,7 +256,34 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button class="button button--effect-1">
+                                                <div class="form-order__data-box-2 social-ch">
+                                                    <p>Выберите удобный способ связи</p>
+                                                    <ul>
+                                                        <li>
+                                                            <input class="visually-hidden" id="soc-check-1"
+                                                                   type="checkbox"
+                                                                   checked="checked"/>
+                                                            <label for="soc-check-1"><img src="images/svg/icon-viber.svg" alt="">Viber</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="visually-hidden" id="soc-check-2"
+                                                                   type="checkbox"/>
+                                                            <label for="soc-check-2"><img src="images/svg/icon-telegram.svg" alt="">Telegram</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="visually-hidden" id="soc-check-3"
+                                                                   type="checkbox"
+                                                                   checked="checked"/>
+                                                            <label for="soc-check-3"><img src="images/svg/icon-whatsapp.svg" alt="">Whatsapp</label>
+                                                        </li>
+                                                        <li>
+                                                            <input class="visually-hidden" id="soc-check-4"
+                                                                   type="checkbox"/>
+                                                            <label for="soc-check-4"><img src="images/svg/icon-skype.svg" alt="">Skype</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button class="service-slider__btn">
                                                     <span>Оформить доставку</span>
                                                 </button>
                                             </form>
@@ -265,6 +295,10 @@
                     </div>
                 </div>
             </div>
+            <a href="#form-delivery" class="service-slider__btn js-btn">
+                <span>Оформить доставку</span>
+            </a>
+            <span class="insert"></span>
             <div class="delivery__delivery-caption container">
                 <h3>Условия доставки</h3>
                 <ul>

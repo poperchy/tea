@@ -910,6 +910,7 @@ textarea {
       padding: 0;
     }
 
+
     p {
       font-style: normal;
       font-weight: normal;
@@ -921,6 +922,8 @@ textarea {
       }
 
     }
+
+
   }
 }
 
@@ -1292,7 +1295,7 @@ textarea {
   }
 
   @include tablet-width {
-    padding: 0 15px;
+    padding: 0 7px;
     margin-bottom: 0;
   }
 }
@@ -1305,7 +1308,7 @@ textarea {
   position: relative;
 
   @include tablet-width {
-    padding: 10px;
+    padding: 7px;
   }
 
   &::before {
@@ -1322,7 +1325,7 @@ textarea {
       width: 35px;
       height: 35px;
       top: -10px;
-      left: -10px;
+      left: -7px;
       background-size: 35px 35px;
     }
   }
@@ -1333,7 +1336,8 @@ textarea {
   background-image: linear-gradient(330deg, rgba(86, 100, 130, 0.81) -7%, rgba(28, 40, 69, 0.7) 80%, #172340 100%);
 
   @include tablet-width {
-    padding: 30px 15px;
+    padding: 30px 10px;
+    background: linear-gradient(269.07deg, rgba(86, 100, 130, 0.81) -7.49%, #172340 95.19%);
   }
 
   h3 {
@@ -1542,8 +1546,9 @@ textarea {
     }
 
     @include tablet-width {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
       grid-gap: 10px 0;
+      padding-left: 20px !important;
     }
   }
 
@@ -1677,15 +1682,38 @@ textarea {
 
 
 .delivery {
+
+
+  @include desktop-width-min {
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
   .form-order__box--delivery {
-    .button {
-      max-width: 220px;
+    .service-slider__btn {
+      margin-left: auto;
+      max-width: 246px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-right: auto;
+      margin-bottom: 0;
     }
   }
 
   &__delivery-caption {
     margin-top: 198px;
     margin-bottom: 60px;
+
+    @include desktop-width-min {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    @media(max-width: 767px) {
+      margin-top: 20px;
+    }
+
 
     h3 {
       position: relative;
@@ -1697,6 +1725,12 @@ textarea {
       padding-bottom: 20px;
       margin-bottom: 60px;
 
+      @media(max-width: 1024px) {
+        font-size: 16px;
+        line-height: 36px;
+        margin-bottom: 20px;
+      }
+
       &:after {
         position: absolute;
         content: '';
@@ -1706,10 +1740,14 @@ textarea {
         bottom: 0;
         left: 0;
       }
+
     }
 
     ul {
       list-style: decimal;
+      @media(max-width: 1024px) {
+        padding-left: 23px;
+      }
     }
 
     li {
@@ -1731,6 +1769,11 @@ textarea {
       font-size: 18px;
       line-height: 25px;
       margin-left: 10px;
+
+      @media(max-width: 1024px) {
+        font-size: 14px;
+        line-height: 19px;
+      }
     }
 
     strong {
@@ -1749,14 +1792,26 @@ textarea {
     font-size: 26px;
     line-height: 36px;
     max-width: 650px;
+
+    @media(max-width: 1400px) and (min-width: 1024px) {
+      margin-bottom: 120px;
+    }
+
+    @media(max-width: 1024px) {
+      max-width: unset;
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   &__ordering {
-    min-height: 768px;
+    min-height: unset;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-
+    @media(max-width: 767px) {
+      background-position: 31%;
+    }
 
     .form-order {
       margin-top: -94px;
@@ -1773,20 +1828,37 @@ textarea {
       padding: 0 22px;
       background: #172340;
       height: 100%;
+      @media(max-width: 1320px) and (min-width: 1024px) {
+        padding: 10px;
+      }
     }
 
     .form-order__inner-box {
       padding: 16px;
       height: 100%;
+      @media(max-width: 1320px) and (min-width: 1024px) {
+        padding: 10px;
+      }
+
     }
 
     .form-order__wrap-box {
       height: 100%;
+
+      @media(max-width: 1320px) and (min-width: 1024px) {
+        padding: 25px;
+      }
+      @media(max-width: 767px) {
+        padding: 30px 10px;
+      }
     }
 
     &-wrap {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+
     }
 
     ul {
@@ -1796,16 +1868,37 @@ textarea {
       display: flex;
       flex-direction: column;
       gap: 30px;
+      justify-content: center;
+
+      @include desktop-width-min {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 76px;
+        margin-bottom: 76px;
+      }
+      @include tablet-width {
+        margin-top: 52px;
+        margin-bottom: 52px;
+        gap: 15px;
+      }
 
       li {
         display: flex;
         align-items: center;
         gap: 20px;
-
+        @media(max-width: 767px) {
+          flex-direction: column;
+          align-items: end;
+        }
 
         img {
           width: 100px;
           height: 100px;
+
+          @media(max-width: 767px) {
+            margin: 0 auto;
+            margin-bottom: -20px;
+          }
         }
 
         h3 {
@@ -1815,6 +1908,10 @@ textarea {
           letter-spacing: 0.03em;
           color: #FFC130;
           text-transform: uppercase;
+          @media(max-width: 1024px) {
+            font-size: 14px;
+            line-height: 19px;
+          }
         }
 
         p {
@@ -1824,6 +1921,10 @@ textarea {
           line-height: 25px;
           color: #FFFFFF;
           margin: 0;
+          @media(max-width: 1024px) {
+            font-size: 14px;
+            line-height: 19px;
+          }
         }
       }
     }
@@ -1876,6 +1977,11 @@ textarea {
     img {
       width: 50px;
       height: 35px;
+
+      @include tablet-width {
+        width: 120px;
+        height: 35px;
+      }
     }
   }
 
@@ -1912,7 +2018,10 @@ textarea {
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 30px;
-
+  @include tablet-width {
+    justify-content: space-between;
+    gap: 10px;
+  }
 
   [type="radio"]:checked + label,
   [type="radio"]:not(:checked) + label {
@@ -1923,6 +2032,9 @@ textarea {
     font-weight: normal;
     font-size: 16px;
     line-height: 25px;
+    @include tablet-width {
+      padding-left: 23px;
+    }
   }
 
   [type="radio"]:checked + label:before,
@@ -1979,15 +2091,26 @@ textarea {
   padding-right: 12px;
   padding-bottom: 20px;
   border-radius: 2px;
-  min-height: 152px;
+  min-height: 100px;
   color: #FFFFFF;
   border: solid 1px transparent;
-  -o-border-image: -o-linear-gradient(136deg, #FFB520 63%, rgba(28, 40, 69, 0.7) 88%, #212D4A 80%);
   border-image: linear-gradient(47deg, #ffffff 23%, rgba(28, 40, 69, 0.7) 108%, #212d4a00 80%);
   border-image-slice: 1;
   background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), color-stop(105.92%, rgba(255, 255, 255, 0.25)));
   background: -o-linear-gradient(left, #FFFFFF 0%, rgba(255, 255, 255, 0.25) 105.92%);
   background: linear-gradient(248deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.25) 105.92%);
+
+
+  &:focus {
+    border: solid 1px transparent;
+    border-image: linear-gradient(47deg, #FFB520 23%, rgba(28, 40, 69, 0.7) 108%, #212d4a00 80%);
+    border-image-slice: 1;
+
+  }
+}
+
+input:focus {
+  background-image: linear-gradient(90deg, #FFB520 0%, rgba(255, 255, 255, 0.1375) 105.92%);
 }
 
 .form-group--text {
@@ -2008,12 +2131,138 @@ textarea {
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   line-height: 25px;
+
+  @media(max-width: 767px) {
+    left: 10px;
+    font-size: 13px;
+  }
 }
 
+.text-label {
+  top: 12px !important;
+}
 
 .form-group textarea:focus ~ label, .form-group textarea.not-empty ~ label {
   font-size: 14px;
   transform: translateY(-40px);
   transition: all 0.3s linear;
   color: rgba(255, 193, 48, 0.5);
+  @media(max-width: 767px) {
+    font-size: 13px;
+  }
 }
+
+.file-res {
+  display: none;
+  align-items: center;
+  gap: 10px;
+
+  span {
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFB520;
+    padding-left: 42px;
+  }
+}
+
+.reset-file {
+  img {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.social-ch {
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  input {
+    &:focus ~ label {
+      font-size: 14px;
+      line-height: 16px;
+      color: #FFFFFF;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      top: 1px !important;
+      left: 2px !important;
+    }
+  }
+
+  img {
+    width: 27px !important;
+    height: 27px !important;
+  }
+}
+
+.form-order__delivery {
+  &--hide {
+    @include desktop-width-min {
+      display: none;
+    }
+
+    @include tablet-width {
+      display: none;
+    }
+  }
+
+  &--show {
+    display: none;
+  }
+}
+
+.delivery__ordering-wrap {
+  @include desktop-width-min {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  @include tablet-width {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.js-btn {
+  display: none;
+  margin: 47px auto;
+
+  @include desktop-width-min {
+    display: block;
+  }
+
+  @include tablet-width {
+    display: block;
+  }
+}
+
+.form-order__box--delivery .service-slider__btn {
+  @media (max-width: 767px) {
+    margin-top: 40px;
+    max-width: 190px;
+  }
+}
+

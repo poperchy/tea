@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3f100435-5f51-4524-80d3-c20fe7b829b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/images/svg/man.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/svg/man.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/components/simple.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/components/simple.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/views/about.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/about.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/views/delivery-page.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/delivery-page.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/home.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/home.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/layout/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/layout/base.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,7 @@
       <workItem from="1610519111652" duration="18892000" />
       <workItem from="1610605938223" duration="22700000" />
       <workItem from="1610697785763" duration="18318000" />
+      <workItem from="1610779342932" duration="9429000" />
     </task>
     <servers />
   </component>
@@ -54,6 +54,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610782214949">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160/-1280.0.1280.984@0.0.1920.1160" timestamp="1610782214949" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610429876955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
